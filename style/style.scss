@@ -1,0 +1,500 @@
+// Variables
+$white: #fff;
+$black: #000;
+$creme: #fafaf5;
+$vanilla: #f7f7ea;
+$raspberry: #c74056;
+$cherry: #6e2c30;    
+$coal: #453f43;
+$sand: #cfc1ba;
+$noborder: 0px solid transparent;
+
+// Mixins
+@mixin transition( $pdfd ) { //@include transition(property duration timing-function delay)
+    -webkit-transition: $pdfd;
+    -moz-transition:    $pdfd;
+    -ms-transition:     $pdfd;
+    -o-transition:      $pdfd;
+    transition:         $pdfd;       
+}
+
+@mixin border-radius($radius) { //@include border-radius(radius)
+    -webkit-border-radius: $radius;
+    border-radius:         $radius;
+}
+ 
+@mixin box-shadow($hvbsc){ //@includ box-shadow(horizontal length vertical length blur radius spread color)
+    -webkit-box-shadow: $hvbsc;
+    box-shadow:         $hvbsc;
+}
+
+@mixin flexbox($direction, $wrap, $justify, $align){ //@include flexbox(direction, wrap, justify, align)
+    display:         flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    -webkit-flex-direction: $direction;
+    flex-direction:         $direction;
+    -webkit-flex-wrap: $wrap;
+    flex-wrap:         $wrap;
+    -webkit-justify-content: $justify;
+    justify-content:         $justify;
+    -webkit-align-items: $align;
+    align-items:         $align;
+}
+
+@mixin rowMachine($numPerRow, $margin) { //@include rowMachine(numPerRow, margin)
+  width: ((100% - (($numPerRow - 1) * $margin)) / $numPerRow);
+  &:nth-child(n) {
+    margin-bottom: $margin;
+    margin-right: $margin;
+  }
+  &:nth-child(#{$numPerRow}n) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+@mixin clearfix { // @include clearfix
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/** Content
+------------------------------------------------
+    1.  Reset
+    2.  General Style
+        2.1 Containers
+        2.2 Textstyles
+    3.  Header
+    4.  Navigation
+    5.  Page Types
+        5.1 Home Page
+        5.2 Static Pages
+        5.3 Item Pages
+        5.4 Index Pages
+    6. Components
+        6.1 Date
+    7. Credits  
+*/
+
+
+
+/** 1. Reset
+------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+    
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+    
+body{
+    line-height: 1;
+}
+    
+ol, ul{
+    list-style: none;
+}
+    
+blockquote, q{
+    quotes: none;
+}
+    
+blockquote:before, blockquote:after,
+q:before, q:after{
+    content: '';
+    content: none;
+}
+    
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+    
+b, strong{
+    font-weight: bold;
+}
+        
+i, em{
+    font-style: italic;
+}
+
+/** 2.  General Style
+------------------------------------------------*/
+ /* 2.1 Containers */
+body {
+    font: {
+        family: Lato;
+        weight: 300;
+        size: 20px;
+    }
+    
+    line-height: 1.2;
+    color: $coal;
+    
+    background:  { 
+        image: url(https://60cc30a8a96589053dc649f37fa590178211341b.googledrive.com/host/0Bz6HRVCs7oBaa1ZQSDVoMmdDTXc/janesfashion/bg.png);
+        repeat: repeat;
+        attachment: fixed;
+    }
+}
+
+.content {
+    width: 80%;
+    max-width: 1100px;
+    position: relative;
+    margin: 0px auto 50px auto;
+    top: 50px;
+    padding: 0px;
+    background:{
+        color: rgba(complement($creme), .7);
+    }
+    z-index: 2;
+}
+
+.girl{
+    background: {
+        image: url(https://60cc30a8a96589053dc649f37fa590178211341b.googledrive.com/host/0Bz6HRVCs7oBaa1ZQSDVoMmdDTXc/janesfashion/figurebw.png);
+        position: bottom right;
+        size: contain;
+        repeat: no-repeat;
+        position: fixed;
+    }
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+footer{
+    display: block;
+    padding: 10px;    
+}
+
+section{
+    @extend footer;
+    margin: 30px 0px;
+}
+
+
+/* 2.2 Textstyles */
+h1, h2, h3, h4, h5{
+    font-weight: bold;
+}
+
+h5{
+    font-size: 1em;
+}
+
+h4{
+    font-size: 1.2em;
+}
+
+h3{
+    font-size: 1.4em;
+}
+
+h2{
+    font-size: 1.6em;
+}
+
+h1{
+    font-size: 1.8em;
+}
+
+a{
+    color: $raspberry;
+    text-decoration: none;
+    @include transition(all 1s ease);
+    
+    &:hover{
+        color: $cherry;
+        @include transition(all .3s ease);
+    }
+}
+
+.button,
+.button:visited{
+    background: lighten($coal, 15%);
+    color: $creme;
+    padding: 7px 10px;
+    line-height: 2.2;
+    text-align: center;
+    font-weight: 700;
+    @include border-radius(3px);
+    position: relative;
+    @include box-shadow(0px 4px 0px 0px darken($coal, 10%));
+    @include transition(background .1s ease-in-out);
+    
+    &:hover,
+    &:visited:hover{
+        background: lighten($coal, 7%);
+        color: complement($creme);
+    }
+    
+    &:active,
+    &:visited:active,
+    &:focus,
+    &:visited:focus{
+        @include box-shadow(0px 2px 0px 0px darken($coal, 10%));
+        top: 2px;
+        @include transition(background .1s ease-in-out);
+    }
+}
+
+/** 3. Header
+------------------------------------------------*/
+.head{
+    text-align: center;
+    padding-bottom: 20px;
+    
+    h1{
+        font-weight: 300;
+        font-style: italic;
+        font-size: 4em;
+    }
+    
+    a{
+        color: $black;
+        
+        &:hover{
+            color: lighten($black, 30%);
+        }
+    }
+    
+}
+
+/** 4. Navigation
+------------------------------------------------*/
+#menu {
+    width: 100%; /* 1000 */
+    position: relative;
+    top: 0;
+    left:0;
+    z-index: 10;
+    font-size: .9em;
+    text-aling: center;
+    
+    @media screen and (max-width: 913px){
+        position: absolute;
+        top: auto;
+        left: auto;
+        background-color: $coal;
+        
+        > a {
+            height: 3.125em;
+            text-align: left;
+            text-indent: -9999px;
+            position: relative;
+            
+            &:after{
+                content: "";
+                position: absolute;
+                left: .5625em;
+                top: 0.9em;
+                width: 2em;
+                height: 0.25em;
+                background: $white;
+                box-shadow:
+                    0 0.5em 0 0 $white,
+                    0 1em 0 0 $white;
+            }
+            
+            &:hover:after{
+                background: $raspberry;
+                box-shadow:
+                    0 0.5em 0 0 $raspberry,
+                    0 1em 0 0 $raspberry;
+            }    
+        }
+        
+        &:not(:target)
+            > a:first-of-type,
+        &:target
+            > a:last-of-type{
+                display: block;
+            }
+        
+        > ul{
+            height: auto;
+            display: none;
+            position: absolute;
+            left: 0;
+            right: 0;
+            
+            > li{
+                display: block;
+                width: 100%;
+                background-color: $coal;
+                padding: 0 !important;
+                
+                a{
+                    height: auto;
+                    text-align: left;
+                    padding: 0;
+                }
+            }
+        }
+        
+        &:target 
+            > ul{
+                display: block;
+            }
+        
+        li 
+            ul{
+                position: static;
+                padding: 1.25em 0;
+                padding-top: 0;
+            }
+    } //end media query 
+    
+    > a{
+        display: none;
+    }
+    
+    li{
+        position: relative;
+        
+        a {
+            color: #fff;
+            display: block;
+        }
+        
+        ul{      
+            background-color: $coal;
+            display: none;
+            position: absolute;
+            top: 100%;
+            
+            a{
+                font-size: 1em;
+                padding: 0.5em;
+            }
+            
+            li
+                a:hover{
+                    background-color: lighten($coal, 15%);
+                }
+            
+            &:not(:hover)
+                li.active
+                    a{
+                        background-color: lighten($coal, 15%);
+                    }
+        }
+        
+        &:hover
+            ul{
+                display: block;
+                left: 0;
+                right: 0;
+            }
+    }
+
+    span:after {
+        width: 0;
+        height: 0;
+        border: 0.2em solid transparent;
+        border-bottom: none;
+        border-top-color: rgba($white, .8);
+        content: '';
+        vertical-align: middle;
+        display: inline-block;
+        position: relative;
+        right: -0.2em;
+    }
+    
+    > ul {
+        height: 2.5em;
+        background-color: $coal;
+        text-align: center;
+        
+        &:not(:hover)
+            >li.active
+                >a{
+                  background-color: lighten($coal, 15%);  
+                }
+        > li {
+            padding: 0px 1em;
+            height: 100%;
+            list-style: none;
+            display: inline-block;
+            
+            &:hover {
+                    background-color: lighten($coal, 15%);
+                }
+            
+            > a {
+                height: 100%;
+                font-size: 1.2em; /* 24 */
+                line-height: 2em; /* 60 (24) */
+                text-align: center;
+            }
+        }
+    }
+}
+
+// Articles
+.article_container{
+    @include clearfix;
+}
+
+article{
+    @include rowMachine(3, 2%);
+    float: left;
+    
+    @media screen and (max-width: 1060px){
+        @include rowMachine(2, 5%);
+    }
+    
+    @media screen and (max-width: 720px){
+        @include rowMachine(1, 5%);
+    }
+    
+    img{
+        max-width: 100%;
+    }
+}
+
+/** 5. Page Types
+------------------------------------------------*/
+
+/* 5.1  Home */
+
+/* 5.2  Static */
+
+/* 5.3  Item */
+
+/* 5.4  Index */
+
+/** 6. Components
+------------------------------------------------*/
+
+/* 6.1  Date */
+
+/** 7. Credits
+------------------------------------------------*/
