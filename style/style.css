@@ -83,7 +83,7 @@ body {
   font-weight: 300;
   font-size: 20px;
   line-height: 1.2;
-  color: #453f43;
+  color: white;
   background-image: url(https://60cc30a8a96589053dc649f37fa590178211341b.googledrive.com/host/0Bz6HRVCs7oBaa1ZQSDVoMmdDTXc/janesfashion/bg.png);
   background-repeat: repeat;
   background-attachment: fixed;
@@ -167,7 +167,7 @@ a:hover {
 
 .button,
 .button:visited {
-  background: #6d646a;
+  background: white;
   color: #fafaf5;
   padding: 7px 10px;
   line-height: 2.2;
@@ -176,8 +176,8 @@ a:hover {
   -webkit-border-radius: 3px;
   border-radius: 3px;
   position: relative;
-  -webkit-box-shadow: 0px 4px 0px 0px #2a2729;
-  box-shadow: 0px 4px 0px 0px #2a2729;
+  -webkit-box-shadow: 0px 4px 0px 0px #e6e6e6;
+  box-shadow: 0px 4px 0px 0px #e6e6e6;
   -webkit-transition: background 0.1s ease-in-out;
   -moz-transition: background 0.1s ease-in-out;
   -ms-transition: background 0.1s ease-in-out;
@@ -187,7 +187,7 @@ a:hover {
 .button:hover, .button:visited:hover,
 .button:visited:hover,
 .button:visited:visited:hover {
-  background: #585055;
+  background: white;
   color: #f5f5fa;
 }
 .button:active, .button:visited:active, .button:focus, .button:visited:focus,
@@ -195,8 +195,8 @@ a:hover {
 .button:visited:visited:active,
 .button:visited:focus,
 .button:visited:visited:focus {
-  -webkit-box-shadow: 0px 2px 0px 0px #2a2729;
-  box-shadow: 0px 2px 0px 0px #2a2729;
+  -webkit-box-shadow: 0px 2px 0px 0px #e6e6e6;
+  box-shadow: 0px 2px 0px 0px #e6e6e6;
   top: 2px;
   -webkit-transition: background 0.1s ease-in-out;
   -moz-transition: background 0.1s ease-in-out;
@@ -240,7 +240,7 @@ a:hover {
     position: absolute;
     top: auto;
     left: auto;
-    background-color: #453f43;
+    background-color: white;
   }
   #menu > a {
     height: 3.125em;
@@ -277,7 +277,7 @@ a:hover {
   #menu > ul > li {
     display: block;
     width: 100%;
-    background-color: #453f43;
+    background-color: white;
     padding: 0 !important;
   }
   #menu > ul > li a {
@@ -307,7 +307,7 @@ a:hover {
   display: block;
 }
 #menu li ul {
-  background-color: #453f43;
+  background-color: white;
   display: none;
   position: absolute;
   top: 100%;
@@ -318,12 +318,12 @@ a:hover {
 }
 #menu li ul li
 a:hover {
-  background-color: #6d646a;
+  background-color: white;
 }
 #menu li ul:not(:hover)
 li.active
 a {
-  background-color: #6d646a;
+  background-color: white;
 }
 #menu li:hover
 ul {
@@ -345,13 +345,13 @@ ul {
 }
 #menu > ul {
   height: 2.5em;
-  background-color: #453f43;
+  background-color: white;
   text-align: center;
 }
 #menu > ul:not(:hover)
 > li.active
 > a {
-  background-color: #6d646a;
+  background-color: white;
 }
 #menu > ul > li {
   padding: 0px 1em;
@@ -360,7 +360,7 @@ ul {
   display: inline-block;
 }
 #menu > ul > li:hover {
-  background-color: #6d646a;
+  background-color: white;
 }
 #menu > ul > li > a {
   height: 100%;
