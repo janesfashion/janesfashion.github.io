@@ -1,0 +1,21 @@
+@import "nav";
+
+.head{
+    text-align: center;
+    padding-bottom: 20px;
+
+    h1{
+        font-weight: 300;
+        font-style: italic;
+        font-size: 4em;
+    }
+
+    a{
+        color: $black;
+
+        &:hover{
+            color: lighten($black, 30%);
+        }
+    }
+
+}

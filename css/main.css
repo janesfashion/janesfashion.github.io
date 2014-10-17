@@ -1,0 +1,398 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, section, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer,
+section, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+i, em {
+  font-style: italic;
+}
+
+.article_container:after,
+.pager:after, .clearfix:after,
+.post-body:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.prev_img a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.post-author {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+body {
+  font-family: "Lato", "Calibri", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #453f43;
+  background-image: url(https://60cc30a8a96589053dc649f37fa590178211341b.googledrive.com/host/0Bz6HRVCs7oBaa1ZQSDVoMmdDTXc/janesfashion/bg.png);
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+.content {
+  width: 80%;
+  max-width: 1100px;
+  position: relative;
+  margin: 0px auto 50px auto;
+  top: 50px;
+  padding: 0px;
+  background-color: rgba(245, 245, 250, 0.7);
+  z-index: 2;
+}
+
+.girl {
+  background-image: url(https://60cc30a8a96589053dc649f37fa590178211341b.googledrive.com/host/0Bz6HRVCs7oBaa1ZQSDVoMmdDTXc/janesfashion/figurebw.png);
+  background-position: bottom right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: fixed;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+footer, section {
+  display: block;
+  padding: 10px;
+}
+
+section {
+  margin: 30px 0px;
+}
+
+/* 2.2 Textstyles */
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+a {
+  color: #c74056;
+  text-decoration: none;
+  transition: all 1s ease;
+}
+a:hover {
+  color: #6e2c30;
+  transition: all .3s ease;
+}
+
+.button {
+  @includ button(lighten(#453f43, 15%));
+}
+
+#menu {
+  width: 100%;
+  /* 1000 */
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  font-size: .9em;
+  text-aling: center;
+}
+@media screen and (max-width: 913px) {
+  #menu {
+    position: absolute;
+    top: auto;
+    left: auto;
+    background-color: #453f43;
+  }
+  #menu > a {
+    height: 3.125em;
+    text-align: left;
+    text-indent: -9999px;
+    position: relative;
+  }
+  #menu > a:after {
+    content: "";
+    position: absolute;
+    left: .5625em;
+    top: 0.9em;
+    width: 2em;
+    height: 0.25em;
+    background: #fdfdfd;
+    box-shadow: 0 0.5em 0 0 #fdfdfd, 0 1em 0 0 #fdfdfd;
+  }
+  #menu > a:hover:after {
+    background: #c74056;
+    box-shadow: 0 0.5em 0 0 #c74056, 0 1em 0 0 #c74056;
+  }
+  #menu:not(:target)
+  > a:first-of-type, #menu:target
+  > a:last-of-type {
+    display: block;
+  }
+  #menu > ul {
+    height: auto;
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  #menu > ul > li {
+    display: block;
+    width: 100%;
+    background-color: #453f43;
+    padding: 0 !important;
+  }
+  #menu > ul > li a {
+    height: auto;
+    text-align: left;
+    padding: 0;
+  }
+  #menu:target
+  > ul {
+    display: block;
+  }
+  #menu li
+  ul {
+    position: static;
+    padding: 1.25em 0;
+    padding-top: 0;
+  }
+}
+#menu > a {
+  display: none;
+}
+#menu li {
+  position: relative;
+}
+#menu li a {
+  color: #fff;
+  display: block;
+}
+#menu li ul {
+  background-color: #453f43;
+  display: none;
+  position: absolute;
+  top: 100%;
+}
+#menu li ul a {
+  font-size: 1em;
+  padding: 0.5em;
+}
+#menu li ul li
+a:hover {
+  background-color: #6d646a;
+}
+#menu li ul:not(:hover)
+li.active
+a {
+  background-color: #6d646a;
+}
+#menu li:hover
+ul {
+  display: block;
+  left: 0;
+  right: 0;
+}
+#menu span:after {
+  width: 0;
+  height: 0;
+  border: 0.2em solid transparent;
+  border-bottom: none;
+  border-top-color: rgba(253, 253, 253, 0.8);
+  content: '';
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  right: -0.2em;
+}
+#menu > ul {
+  height: 2.5em;
+  background-color: #453f43;
+  text-align: center;
+}
+#menu > ul:not(:hover)
+> li.active
+> a {
+  background-color: #6d646a;
+}
+#menu > ul > li {
+  padding: 0px 1em;
+  height: 100%;
+  list-style: none;
+  display: inline-block;
+}
+#menu > ul > li:hover {
+  background-color: #6d646a;
+}
+#menu > ul > li > a {
+  height: 100%;
+  font-size: 1.2em;
+  /* 24 */
+  line-height: 2em;
+  /* 60 (24) */
+  text-align: center;
+}
+
+.head {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.head h1 {
+  font-weight: 300;
+  font-style: italic;
+  font-size: 4em;
+}
+.head a {
+  color: #121212;
+}
+.head a:hover {
+  color: #5f5f5f;
+}
+
+article img {
+  max-width: 100%;
+}
+
+.index article,
+.static_page .post_prev {
+  width: 32%;
+  float: left;
+}
+.index article:nth-child(n),
+.static_page .post_prev:nth-child(n) {
+  margin-bottom: 20px;
+  margin-right: 2%;
+}
+.index article:nth-child(3n),
+.static_page .post_prev:nth-child(3n) {
+  margin-right: 0;
+}
+@media screen and (max-width: 1060px) {
+  .index article,
+  .static_page .post_prev {
+    width: 47.5%;
+  }
+  .index article:nth-child(n),
+  .static_page .post_prev:nth-child(n) {
+    margin-bottom: 20px;
+    margin-right: 5%;
+  }
+  .index article:nth-child(2n),
+  .static_page .post_prev:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 720px) {
+  .index article,
+  .static_page .post_prev {
+    width: 100%;
+  }
+  .index article:nth-child(n),
+  .static_page .post_prev:nth-child(n) {
+    margin-bottom: 20px;
+    margin-right: 5%;
+  }
+  .index article:nth-child(1n),
+  .static_page .post_prev:nth-child(1n) {
+    margin-right: 0;
+  }
+}
+
+.prev_img {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 100% 0 0 0;
+}
+.prev_img a {
+  display: block;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.prev_img a img {
+  min-height: 100%;
+  min-width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

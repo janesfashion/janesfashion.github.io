@@ -1,0 +1,58 @@
+.article_container,
+.pager {
+    @extend %clearfix;
+}
+
+article{
+    img{
+        max-width: 100%;
+    }
+}
+
+.index article,
+.static_page .post_prev{
+    @include rowMachine(3, 2%, 20px);
+    float: left;
+
+    @media screen and (max-width: 1060px){
+        @include rowMachine(2, 5%, 20px);
+    }
+
+    @media screen and (max-width: 720px){
+        @include rowMachine(1, 5%, 20px);
+    }
+}
+
+.clearfix,
+.post-body{
+        @extend %clearfix;
+}
+
+.post-author{
+    @extend %hidden;
+}
+
+
+.prev_img{
+    @include paddinghack(100%, 1, 1);
+    a{
+        @extend %paddinghack;
+        display: block;
+        background: {
+            size: cover;
+            position: center;
+        }
+
+        overflow: hidden;
+
+        img{
+            min-height: 100%;
+            min-width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+
