@@ -91,5 +91,5 @@ a{
 }
 
 .button{
-    @includ button(lighten($coal, 15%));
+    @include button(lighten($coal, 15%));
 }
