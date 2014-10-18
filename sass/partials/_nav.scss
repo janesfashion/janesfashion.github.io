@@ -62,7 +62,6 @@
                     height: auto;
                     text-align: left;
                     padding: 0;
-                    @include button($coal);
                 }
             }
         }
@@ -90,6 +89,7 @@
         a {
 //            color: $black;
             display: block;
+            @include button($coal);
         }
 
         ul{
