@@ -94,3 +94,10 @@ a{
 .button{
     @include button(lighten($coal, 15%));
 }
+
+
+#menu{
+    a{
+        @include button($coal);
+    }
+}
