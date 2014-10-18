@@ -11,7 +11,6 @@
         position: absolute;
         top: auto;
         left: auto;
-        background-color: $coal;
 
         > a {
             height: 3.125em;
@@ -57,7 +56,6 @@
             > li{
                 display: block;
                 width: 100%;
-                background-color: $coal;
                 padding: 0 !important;
 
                 a{
@@ -89,12 +87,11 @@
         position: relative;
 
         a {
-            color: #fff;
+            color: $black;
             display: block;
         }
 
         ul{
-            background-color: $coal;
             display: none;
             position: absolute;
             top: 100%;
@@ -106,13 +103,13 @@
 
             li
                 a:hover{
-                    background-color: lighten($coal, 15%);
+//                    background-color: lighten($coal, 15%);
                 }
 
             &:not(:hover)
                 li.active
                     a{
-                        background-color: lighten($coal, 15%);
+//                        background-color: lighten($coal, 15%);
                     }
         }
 
@@ -139,13 +136,13 @@
 
     > ul {
         height: 2.5em;
-        background-color: $coal;
+       // background-color: $coal;
         text-align: center;
 
         &:not(:hover)
             >li.active
                 >a{
-                  background-color: lighten($coal, 15%);
+                 // background-color: lighten($coal, 15%);
                 }
         > li {
             padding: 0px 1em;
@@ -154,7 +151,7 @@
             display: inline-block;
 
             &:hover {
-                    background-color: lighten($coal, 15%);
+                //    background-color: lighten($coal, 15%);
                 }
 
             > a {
