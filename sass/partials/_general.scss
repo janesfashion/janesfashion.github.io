@@ -38,6 +38,7 @@ body {
         margin-left: 0;
         width: 50%;
     }
+    margin-bottom: 30px;
 }
 
 .girl{
@@ -61,6 +62,10 @@ body {
 
     @media screen and (max-width: 1440px){
         transform: translateX(15%);
+    }
+
+    @media screen and (max-width: 600px){
+        display: none;
     }
 }
 
