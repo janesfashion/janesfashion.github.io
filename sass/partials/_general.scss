@@ -29,6 +29,10 @@ body {
 //        color: rgba(complement($creme), .7);
     }
     z-index: 2;
+
+    @media screen and (max-width: 1440px){
+        margin: 0px 10% 0 50px;
+    }
 }
 
 .girl{
@@ -51,7 +55,7 @@ body {
     }
 
     @media screen and (max-width: 1440px){
-        transform: translateX(25%);
+        transform: translateX(15%);
     }
 }
 

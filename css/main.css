@@ -107,6 +107,11 @@ body {
   padding: 0px;
   z-index: 2;
 }
+@media screen and (max-width: 1440px) {
+  .content {
+    margin: 0px 10% 0 50px;
+  }
+}
 
 .girl {
   background-image: url(https://60cc30a8a96589053dc649f37fa590178211341b.googledrive.com/host/0Bz6HRVCs7oBaa1ZQSDVoMmdDTXc/janesfashion/figurebw.png);
@@ -129,9 +134,9 @@ body {
 }
 @media screen and (max-width: 1440px) {
   .girl {
-    -webkit-transform: translateX(25%);
-    -ms-transform: translateX(25%);
-    transform: translateX(25%);
+    -webkit-transform: translateX(15%);
+    -ms-transform: translateX(15%);
+    transform: translateX(15%);
   }
 }
 
