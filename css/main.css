@@ -123,7 +123,7 @@ body {
 }
 @media screen and (max-width: 1200px) {
   .girl {
-    margin-top: 55px;
+    height: 95%;
   }
 }
 
