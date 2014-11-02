@@ -583,3 +583,28 @@ article img {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
+#content img {
+  width: 100%;
+}
+
+#content {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 5px;
+  -moz-column-gap: 5px;
+  column-gap: 5px;
+  width: 100%;
+  font-size: 0 !important;
+  line-height: 0 !important;
+}
+
+#container {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+}

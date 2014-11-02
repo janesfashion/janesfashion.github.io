@@ -55,4 +55,19 @@ article{
     }
 }
 
-
+#content img {
+    width: 100%;
+}
+#content {
+    column-count: 3;
+    column-gap: 5px;
+    width: 100%;
+    font-size: 0 !important;
+    line-height: 0 !important;
+}
+#container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 auto;
+}
