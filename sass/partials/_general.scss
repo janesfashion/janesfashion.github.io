@@ -16,10 +16,6 @@ body {
     }
 
     box-sizing: border-box;
-
-    @media screen and (max-width: $mainnav_collapse){
-        margin-top: 55px;
-    }
 }
 
 .content {
@@ -48,6 +44,11 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+
+    @media screen and (max-width: $mainnav_collapse){
+        margin-top: 55px;
+    }
+
 }
 
 footer{
