@@ -112,6 +112,12 @@ body {
     margin: 0px 10% 0 50px;
   }
 }
+@media screen and (max-width: 600%) {
+  .content {
+    margin-left: 0;
+    width: 50%;
+  }
+}
 
 .girl {
   background-image: url(https://60cc30a8a96589053dc649f37fa590178211341b.googledrive.com/host/0Bz6HRVCs7oBaa1ZQSDVoMmdDTXc/janesfashion/figurebw.png);
