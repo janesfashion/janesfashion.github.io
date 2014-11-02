@@ -330,6 +330,7 @@ a:hover {
 }
 @media screen and (max-width: 3600px) {
   #menu {
+    position: absolute;
     padding: 35px 0px 0px;
     width: 320px;
     height: 100%;
