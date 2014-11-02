@@ -46,6 +46,7 @@ body {
     left: 0;
 
     @media screen and (max-width: $mainnav_collapse){
+        top: 5%;
         height: 95%;
     }
 
