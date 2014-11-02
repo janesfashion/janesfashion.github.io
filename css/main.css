@@ -127,6 +127,13 @@ body {
     height: 95%;
   }
 }
+@media screen and (max-width: 1440px) {
+  .girl {
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
 
 footer, section {
   display: block;
