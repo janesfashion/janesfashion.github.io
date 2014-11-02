@@ -52,13 +52,18 @@ $max-width: 1500px;
             @media screen and (min-width: $mainnav_collapse+1){
                 @include button($coal);
             }
-            width: 100%;
-            display: block;
+
+            @media screen and (max-width: $mainnav_collapse){
+                width: 100%;
+                display: block;
+            }
         }
 
         &:hover{
             transition: .3s all linear;
-            background: rgba($mainnav_a_hover_bg, .4);
+            @media screen and (max-width: $mainnav_collapse){
+                background: rgba($mainnav_a_hover_bg, .4);
+            }
 
             > a{
                 color: $mainnav_a_hover;
