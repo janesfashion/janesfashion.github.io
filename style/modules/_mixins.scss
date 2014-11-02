@@ -1,0 +1,26 @@
+@mixin flexbox($direction, $wrap, $justify, $align){ //@include flexbox(direction, wrap, justify, align)
+    display:         flex;
+    flex-direction:         $direction;
+    flex-wrap:         $wrap;
+    justify-content:         $justify;
+    align-items:         $align;
+}
+
+@mixin rowMachine($numPerRow, $margin) { //@include rowMachine(numPerRow, margin)
+  width: ((100% - (($numPerRow - 1) * $margin)) / $numPerRow);
+  &:nth-child(n) {
+    margin-bottom: $margin;
+    margin-right: $margin;
+  }
+  &:nth-child(#{$numPerRow}n) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+@mixin paddinghack($containerwidth, $ratiowidth, $ratioheight){ //@include paddinghack($containerwidth, $ratiowidth, $ratioheight)
+    position: relative;
+    width: $containerwidth;
+    height: 0;
+    padding: (($ratioheight / $ratiowidth) * $containerwidth) 0 0 0;
+}

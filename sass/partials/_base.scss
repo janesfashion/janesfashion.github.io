@@ -2,6 +2,24 @@
 
 // Settings
 $noborder: 0px solid transparent;
+$max-width: 1500px;
+
+// Main Nav
+$mainnav_name: Menu;
+$mainnav_collapse: 600px;
+
+$mainnav_bg: $coal;
+$mainnav_a_color: $creme;
+$mainnav_a_hover: $white;
+$mainnav_a_hover_bg: $raspberry;
+$mainnav_responsive_text_align: center;
+
+// Toggle Nav
+$toggle_nav_bg: $coal;
+$toggle_button_color: $creme;
+$toggle_button_border: 2px solid $black;
+$toggle_button_hover_border_color: $white;
+$toggle_button_hover_bg: rgba(white, .5);
 
 
 // Extend Only

@@ -194,150 +194,261 @@ a:hover {
   box-shadow: 0px 1px 0px 0px #2a2729;
 }
 
-#menu {
-  width: 100%;
-  /* 1000 */
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  font-size: .9em;
-  text-aling: center;
-}
-@media screen and (max-width: 913px) {
-  #menu {
-    position: absolute;
-    top: auto;
-    left: auto;
-  }
-  #menu > a {
-    height: 3.125em;
-    text-align: left;
-    text-indent: -9999px;
-    position: relative;
-  }
-  #menu > a:after {
-    content: "";
-    position: absolute;
-    left: .5625em;
-    top: 0.9em;
-    width: 2em;
-    height: 0.25em;
-    background: #fdfdfd;
-    -webkit-box-shadow: 0 0.5em 0 0 #fdfdfd, 0 1em 0 0 #fdfdfd;
-    box-shadow: 0 0.5em 0 0 #fdfdfd, 0 1em 0 0 #fdfdfd;
-  }
-  #menu > a:hover:after {
-    background: #c74056;
-    -webkit-box-shadow: 0 0.5em 0 0 #c74056, 0 1em 0 0 #c74056;
-    box-shadow: 0 0.5em 0 0 #c74056, 0 1em 0 0 #c74056;
-  }
-  #menu:not(:target)
-  > a:first-of-type, #menu:target
-  > a:last-of-type {
-    display: block;
-  }
-  #menu > ul {
-    height: auto;
-    display: none;
-    position: absolute;
-    left: 0;
-    right: 0;
-  }
-  #menu > ul > li {
-    display: block;
-    width: 100%;
-    padding: 0 !important;
-  }
-  #menu > ul > li a {
-    height: auto;
-    text-align: left;
-    padding: 0;
-  }
-  #menu:target
-  > ul {
-    display: block;
-  }
-  #menu li
-  ul {
-    position: static;
-    padding: 1.25em 0;
-    padding-top: 0;
-  }
-}
-#menu > a {
-  display: none;
-}
-#menu li {
-  position: relative;
-}
-#menu li a {
-  display: block;
-  margin-top: 10px;
-  margin-right: 10px;
-  padding: 14px 26px;
-  font-size: 1em;
-  color: #fdfdfd;
-  display: inline-block;
-  vertical-align: middle;
+.main_menu {
   text-align: center;
-  cursor: pointer;
-  -webkit-transition: background 0.1s ease-in-out;
-  transition: background 0.1s ease-in-out;
-  border-radius: 5px;
-  outline: 0 none;
-  background-color: #453f43;
-  -webkit-box-shadow: 0px 3px 0px 0px #201d1f;
-  box-shadow: 0px 3px 0px 0px #201d1f;
-}
-#menu li a:hover, #menu li a:focus {
-  background-color: #523247;
-}
-#menu li a:active, #menu li a:focus {
-  padding-top: 15px;
-  margin-bottom: -1px;
-  outline: 0 none;
-  -webkit-box-shadow: 0px 1px 0px 0px #020202;
-  box-shadow: 0px 1px 0px 0px #020202;
-}
-#menu li ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-}
-#menu li ul a {
-  font-size: 1em;
-}
-#menu li:hover
-ul {
-  display: block;
-  left: 0;
-  right: 0;
-}
-#menu span:after {
-  width: 0;
-  height: 0;
-  border: 0.2em solid transparent;
-  border-bottom: none;
-  border-top-color: rgba(253, 253, 253, 0.8);
-  content: '';
-  vertical-align: middle;
-  display: inline-block;
   position: relative;
-  right: -0.2em;
+  top: 0px;
+  width: 100%;
+  rleft: 0px;
+}
+@media screen and (max-width: 600px) {
+  .main_menu {
+    background: #453f43;
+  }
+}
+
+#menu {
+  position: relative;
+  margin: 0px auto;
+  display: block;
+  max-width: 1500px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #fafaf5;
+  font-size: 1em;
+  width: 100%;
+  z-index: 105;
+}
+@media screen and (max-width: 600px) {
+  #menu {
+    background: #453f43;
+  }
+}
+#menu a {
+  color: #fafaf5;
+}
+#menu a:hover {
+  opacity: .8;
+}
+#menu .toggle_link {
+  display: none;
 }
 #menu > ul {
-  height: 2.5em;
   text-align: center;
 }
-#menu > ul > li {
-  padding: 0px 5px;
-  height: 100%;
-  list-style: none;
+#menu li {
   display: inline-block;
+  padding: 20px 7px;
+  -webkit-transition: .3s all linear;
+  transition: .3s all linear;
 }
-#menu > ul > li > a {
-  text-align: center;
+#menu li > a {
+  width: 100%;
+  display: block;
+}
+@media screen and (min-width: 601px) {
+  #menu li > a {
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 14px 26px;
+    font-size: 1em;
+    color: #fdfdfd;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: background 0.1s ease-in-out;
+    transition: background 0.1s ease-in-out;
+    border-radius: 5px;
+    outline: 0 none;
+    background-color: #453f43;
+    -webkit-box-shadow: 0px 3px 0px 0px #201d1f;
+    box-shadow: 0px 3px 0px 0px #201d1f;
+  }
+  #menu li > a:hover, #menu li > a:focus {
+    background-color: #523247;
+  }
+  #menu li > a:active, #menu li > a:focus {
+    padding-top: 15px;
+    margin-bottom: -1px;
+    outline: 0 none;
+    -webkit-box-shadow: 0px 1px 0px 0px #020202;
+    box-shadow: 0px 1px 0px 0px #020202;
+  }
+}
+#menu li:hover {
+  -webkit-transition: .3s all linear;
+  transition: .3s all linear;
+  background: rgba(199, 64, 86, 0.4);
+}
+#menu li:hover > a {
+  color: #fdfdfd;
+}
+@media screen and (min-width: 601px) {
+  #menu .social i {
+    padding: 0px 14px;
+  }
+}
+#menu .parent {
+  margin-left: 0;
+  position: relative;
+}
+#menu .parent > ul {
+  padding-top: 0px;
+  display: none;
+}
+@media screen and (min-width: 601px) {
+  #menu .parent > ul {
+    background: #453f43;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: auto;
+  }
+}
+#menu .parent > ul li {
+  display: block;
+  padding: 10px 0px;
+}
+@media screen and (min-width: 601px) {
+  #menu .parent > ul li {
+    padding: 10px 7px;
+  }
+}
+#menu .parent:hover, #menu .parent:focus {
+  cursor: pointer;
+}
+#menu .parent:hover > ul, #menu .parent:focus > ul {
+  display: block;
+}
+@media screen and (max-width: 600px) {
+  #menu {
+    padding: 35px 0px 0px;
+    width: 320px;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    left: -320px;
+    -webkit-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+    -webkit-transition: .3s all ease;
+    transition: .3s all ease;
+    z-index: 108;
+  }
+  #menu .toggle_link {
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
+  #menu .toggle_link:after {
+    content: "";
+  }
+  #menu > ul {
+    text-align: center;
+    width: 100%;
+    position: relative;
+  }
+  #menu li {
+    display: block;
+    padding: 10px 15px;
+    border-top: 1px solid #524b50;
+  }
+  #menu li:first-of-type {
+    border-top: 0px solid transparent;
+  }
+  #menu li:hover {
+    -webkit-transition: .3s all linear;
+    transition: .3s all linear;
+    background: rgba(199, 64, 86, 0.4);
+  }
+  #menu .parent {
+    margin-left: 0;
+  }
+  #menu .parent > ul {
+    padding-top: 15px;
+    display: none;
+  }
+  #menu .parent > ul li {
+    padding: 10px 0px;
+  }
+  #menu .parent > ul li:first-of-type {
+    border-top: 1px solid #524b50;
+  }
+  #menu .parent:hover, #menu .parent:focus {
+    cursor: pointer;
+  }
+  #menu .parent:hover > ul, #menu .parent:focus > ul {
+    display: block;
+  }
+}
+
+#menu.active {
+  -webkit-transform: translate(320px, 0px);
+  -ms-transform: translate(320px, 0px);
+  transform: translate(320px, 0px);
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
+}
+
+.toggle_nav {
+  display: none;
+}
+.toggle_nav .toggle_link {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .toggle_nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 104;
+    background: #453f43;
+    height: 55px;
+    padding: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .toggle_nav .toggle_link {
+    color: #fafaf5;
+    border: 2px solid #121212;
+    padding: 7px 15px;
+    border-radius: 3px;
+    -webkit-transition: .3s all ease;
+    transition: .3s all ease;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 600px) and (max-width: 240px) {
+  .toggle_nav .toggle_link {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .toggle_nav .toggle_link:hover {
+    -webkit-transition: .3s all ease;
+    transition: .3s all ease;
+    border-color: #fdfdfd;
+    background: rgba(255, 255, 255, 0.5);
+  }
+  .toggle_nav .toggle_link {
+    left: 5px;
+  }
+  .toggle_nav .toggle_link:after {
+    content: "Menu";
+  }
 }
 
 .head {
