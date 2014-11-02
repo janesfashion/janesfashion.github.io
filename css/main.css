@@ -129,9 +129,9 @@ body {
 }
 @media screen and (max-width: 1440px) {
   .girl {
-    -webkit-transform: translateX(50%);
-    -ms-transform: translateX(50%);
-    transform: translateX(50%);
+    -webkit-transform: translateX(25%);
+    -ms-transform: translateX(25%);
+    transform: translateX(25%);
   }
 }
 
